@@ -1,18 +1,20 @@
 # Site settings
-title: "RECORDING ..."
-description: 기록하고, 생각하고, 정리하기
+title: "*PLAN B"
+description: "description"
 url: "http://salee-lee.github.com" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
-twitter_username: twitter_username
-github_username:  seula-lee
-email: salee8909@gmail.com
+social:
+   github: seula-lee
+   instargram: lookat.lee
+   email: salee8909@gmail.com
+
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
 
 # Pagination
-paginate: 15
+paginate: 10
 paginate_path: "/blog/page:num/"
 
 
@@ -23,8 +25,5 @@ collections:
   healing:
     output: true
     permalink: /healing/:path/
-  #poetry:
-  #  output: true
-  #  permalink: /poetry/:path/
 
 
