@@ -1,8 +1,10 @@
 # Site settings
 title: "*PLAN B"
-description: "description"
-url: "http://salee-lee.github.com" # the base hostname & protocol for your site
+description: "기록, 생각, 정리"
+url: "http://salee-lee.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Author Info
 social:
    github: seula-lee
    instargram: lookat.lee
@@ -11,6 +13,8 @@ social:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: pygments
 
 # Pagination
@@ -22,8 +26,8 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
-  healing:
+  plan_b:
     output: true
-    permalink: /healing/:path/
+    permalink: /plan_b/:path/
 
 
