@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * Reset some basic elements
  */
@@ -8,10 +10,16 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 45px 0 25px;
+}
 
 /** Variables **********************************************/
-$base-font-family:              Helvetica, sans-serif;
+$base-font-family:              'Roboto Condensed', 'Hanna', sans-serif, Helvetica;
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
@@ -36,6 +44,7 @@ $grey-color-dark: #333;   /* footer */
 $grey-color-light: #ddd;  /* navigation bar border */
 $text-color:     #666;
 
+
 /* Set theme color *************************/
 $theme-color:   $red;
 
@@ -54,8 +63,6 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -144,7 +151,15 @@ article a {
     }
 }
 
+article img{
+  max-width: calc(800px - (50px * 2));
+}
 
+img.profile{
+  max-width: 250px;
+  width: 15.33%;
+  margin-right: 10px;
+}
 
 /**
  * Blockquotes
@@ -161,7 +176,34 @@ blockquote {
     }
 }
 
-
+/**
+ * footnote
+ */
+ a.footnote {
+  font-size: 0.8em;
+  background: #c1c1c1;
+  color: #fff;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 12px;
+  vertical-align: middle;
+  line-height: 18px;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -webkit-user-select: none;
+  &.open {
+    background: #838383;
+  }
+  @media (min-width: 768px) {
+    vertical-align: -3px;
+  }
+  @media (min-width: 992px) {&:hover {
+      background: #838383;
+    }
+  }
+}
 
 /**
  * Code formatting
@@ -170,11 +212,14 @@ pre,
 code {
     font-size: 15px;
     border-radius: 3px;
-    background-color: $grey-color-light;
+    background-color: #F6F6F6;
 }
 
 code {
     padding: 1px 5px;
+    font-family: Consolas;
+    background-color: #f9f2f4;
+    color: #c7254e;
 }
 
 pre {
@@ -182,6 +227,8 @@ pre {
     overflow-x: scroll;
 
     > code {
+        color: inherit;
+        background-color : inherit;
         border: 0;
         padding-right: 0;
         padding-left: 0;
@@ -245,4 +292,30 @@ ul.listing li span {
     text-transform: uppercase;
     font-size: 12px;
     color: #999
+}
+
+.divider {
+    background: #ddd;
+    background: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(#ccc),to(rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+    height: 1px;
+    margin: 2em 0;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 45px 0;
+    thead {
+    background: #f2f2f2;
+  }
+  th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 15px solid #fff;
+  }
+  td {
+    padding: 4px 0;
+  }
 }
