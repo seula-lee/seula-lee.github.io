@@ -6,7 +6,7 @@ permalink: /about/
 
 <img class="col profile" src="/img/seula-lee.jpg">
 
-일상기록, 정리, 관심있는 스크랩 및 포트폴리오 등을 작성한 개인 페이지 입니다.
+일상기록, 정리, 관심있는 내용 스크랩 및 포트폴리오 등을 작성한 개인 페이지 입니다.
 
 This page is just my private blog what include about my life, recording to things, get someting interesting things and portfolio.
 

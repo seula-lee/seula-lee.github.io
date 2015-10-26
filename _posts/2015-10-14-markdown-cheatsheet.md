@@ -4,60 +4,38 @@ title:  Markdown cheatsheet
 date: 2015-10-14 
 ---
 
-> 이 포스팅은  앞으로 모든 포스팅에서 사용될 Markdown에 대한 샘플로 <a href='http://assemble.io/docs/Cheatsheet-Markdown.html' target='_blank'>**Assemble**</a> 에서 작성된 markdown cheatsheet를 인용하고 있습니다.
+> 이 포스팅은  앞으로 모든 포스팅에서 사용될 Markdown에 대한 샘플로 <a href='http://assemble.io/docs/Cheatsheet-Markdown.html' target='_blank'>**Assemble**</a> 에서 작성된 Markdown cheatsheet 부분에 필요부분만 인용하여 작성하였다. 
 
-## 문장 스타일 강조
+### 타이포그래피 (Typography) 
 
-### 굵은 글씨 (Bold)
+#### 굵은 글씨 (Bold)
 
 ``` markdown
 **rendered as bold text**
 ```
-renders to:
+적용결과 :  **rendered as bold text**
 
-**rendered as bold text**
 
-and this HTML
-
-``` html
-<strong>rendered as bold text</strong>
-```
-
-### Italics
-For emphasizing a snippet of text with italics.
-
-The following snippet of text is _rendered as italicized text_.
+#### 이탤릭체 (Italics)
 
 ``` markdown
 _rendered as italicized text_
 ```
 
-renders to:
-
-_rendered as italicized text_
-
-and this HTML:
-
-``` html
-<em>rendered as italicized text</em>
-```
+적용결과 :  _rendered as italicized text_
 
 
-### strikethrough
-In GFM you can do strickthroughs. 
+#### 표제 (Headings) : H1 ~ H6
 
 ``` markdown
-~~Strike through this text.~~
+# H1 Heading
+## H2 Heading
+### H3 Heading
+#### H4 Heading
+##### H5 Heading
+###### H6 Heading
 ```
-Which renders to:
-
-~~Strike through this text.~~
-
-<div class="divider"></div>
-
-## Typography
-
-## Headings H1 to H6
+적용결과 : 
 
 # H1 Heading
 
@@ -71,69 +49,107 @@ Which renders to:
 
 ###### H6 Heading
 
-<div class="divider"></div>
-
-## Footnote
-
-Let's say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one [^1]. You can even add more footnotes, with link! [^2]
 
 <div class="divider"></div>
 
-## Blockquote
+### 각주 (Footnote)
+
+각주를 표시하고 싶은 문장에 `[^1]` 로 작성하며 1~n 으로 순번 또는 영문으로 링크할 수 있고 클릭 시 해당 각주로 이동 가능하다. 
+각주는 쌍으로 존재하며 
+Example : footnote 1번 [^1]. footnote 2번 [^2] footnote a번 [^a]
+
+<div class="divider"></div>
+
+### 인용구 (Blockquote)
+``` markdown
+> Start by doing what's necessary; then do what's possible; and suddenly you are 
+doing the impossible. --Francis of Assisi
+```
 
 > Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible. --Francis of Assisi
 
-**NOTE:** This theme does NOT support nested blockquotes.
 
 <div class="divider"></div>
 
-## List Items
+### 목록 항목 (List Items)
+
+항목 표기는 **숫자**, *영문*, ***** , **- / +** 방식으로 이용할 수 있다. 
+
+**NOTE:** 연달아 사용하면 
 
 1. First order list item
-2. Second item
-
+1. Second item
+a. third item ?? 
 * Unordered list can use asterisks
 - Or minuses
-+ Or pluses
+	+ Or pluses
+	+ Or minuses
+
 
 <div class="divider"></div>
 
-## Code Highlighting
-This theme implements Jekyll's built in code syntax highlighting with Pygments. Just use a liquid tag to delineate your code: 
-{% highlight python %}
-	code code code
+### 코드 하이라이팅 (code Highlighting)
+이 페이지는 <a href="http://pygments.org/">Pygments</a> 로 코드 하이라이팅을 제공하며 <a href="http://liquidmarkup.org/">Liquid tag</a> 를 이용하여 코드작성할 수 있다. 
+{% raw  %} 
+{% highlight javascript %}
+var a = "hello world";
+console.log("greeting to code : "+ a);
+{% endhighlight %}
+{% endraw %}
+
+
+적용결과 :
+
+{% highlight javascript %}
+var a = "hello world";
+console.log("greeting to code : "+ a);
 {% endhighlight %}
 
-## Code Blocks
+
+### 코드 블록(Code Blocks)
 
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
 ```
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
+<b>tag</b>
+
 <div class="divider"></div>
 
-## Table
+### 표 (Table)
 
-### Table 1: With Alignment
+#### Table 1: 정렬 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+```markdown
+| left         | center        | right  |
+| ------------ |:-------------:| ------:|
+| col 1 is     | left-aligned  |  ---   |
+| col 2 is     | centered      |  :---: |
+| col 3 is     | right-aligned |  ---:  |
+```
+적용결과 : 
 
-### Table 2: With Typography Elements
+| left         | center        | right  |
+| ------------ |:-------------:| ------:|
+| col 1 is     | left-aligned  |  ---   |
+| col 2 is     | centered      |  :---: |
+| col 3 is     | right-aligned |  ---:  |
+
+
+#### Table 2: Typography 사용 
+
+```markdown
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+```
+적용결과 : 
 
 Markdown | Less | Pretty
 --- | --- | ---
@@ -142,15 +158,15 @@ Markdown | Less | Pretty
 
 <div class="divider"></div>
 
-## Horizontal Line
+### 가로선 (Horizontal Line)
 
-The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
+HTML 의 `<hr>` 을 Markdown 으로 다음과 같이 만들 수 있다. 
 
 * `___`: three consecutive underscores
 * `---`: three consecutive dashes
 * `***`: three consecutive asterisks
 
-renders to:
+적용결과 : 
 
 ___
 
@@ -160,16 +176,23 @@ ___
 
 <div class="divider"></div>
 
-## Media
+### 미디어
 
-### YouTube Embedded Iframe
+#### 동영상 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cKWzXaAeeQs" frameborder="0" allowfullscreen></iframe>
 
-### Image
+#### 이미지 
 
-![Minion](http://octodex.github.com/images/minion.png)
+![traveled to macau](/img/20150916_macau.jpg)
 
-[^1]: Footnote number one yeah baby!
 
-[^2]: A footnote you can link to - [click here!](#)
+<div class="divider"></div>
+
+### 각주 (Footnotes)
+
+[^1]: Footnote 1 !!! 
+
+[^2]: Footnote 2 : 링크를 달수도 있다. - [click here!]({{ site.baseurl }}/about)
+
+[^a]: Footnote a : 번호로 시작했기때문에 각주 a 이지만 3으로 표시된다. 
