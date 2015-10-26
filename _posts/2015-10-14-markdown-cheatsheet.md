@@ -184,7 +184,7 @@ ___
 
 #### 이미지 
 
-![traveled to macau](/img/20150916_macau.jpg)
+![traveled to macau](/img/20150916_macau_1.jpg)
 
 
 <div class="divider"></div>
