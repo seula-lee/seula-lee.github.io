@@ -2,7 +2,7 @@
 layout: page
 permalink: /plan_b/
 title: plan B
-description: post on actives and travel 
+description: Planing and performing
 ---
 
 <ul class="post-list">
