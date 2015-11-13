@@ -19,7 +19,7 @@ h5 {
 }
 
 /** Variables **********************************************/
-$base-font-family:              'Roboto Condensed', 'Hanna', sans-serif, Helvetica;
+$base-font-family:              'Roboto Condensed', 'Jeju Gothic', sans-serif, Helvetica;
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
@@ -242,8 +242,8 @@ pre {
  */ 
 
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
-    max-width:         calc(800px - (#{$horizontal-spacing-unit} * 2));
+    max-width: -webkit-calc(900px - (#{$horizontal-spacing-unit} * 2));
+    max-width:         calc(900px - (#{$horizontal-spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;
@@ -292,6 +292,11 @@ ul.listing li span {
     text-transform: uppercase;
     font-size: 12px;
     color: #999
+}
+
+ul.listing li label{
+    color: #FFA7A7;
+    font-weight: 100;
 }
 
 .divider {
