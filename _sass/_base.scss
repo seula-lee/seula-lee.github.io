@@ -26,7 +26,7 @@ $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
 
 /* portfolio tinkering */
-$img_spacing: 5px; 
+$img_spacing: 5px;
 $img_height: 275px;
 $caption_font_size: 12px;
 $caption_color: #aaa;
@@ -133,7 +133,7 @@ a {
     text-decoration: none;
     /*
     &:visited {
-        color: darken($brand-color, 15%); 
+        color: darken($brand-color, 15%);
     }
     */
     &:hover {
@@ -217,7 +217,7 @@ code {
 
 code {
     padding: 1px 5px;
-    font-family: Consolas;
+    font-family: Consolas, sans-serif;
     background-color: #f9f2f4;
     color: #c7254e;
 }
@@ -239,7 +239,7 @@ pre {
 
 /**
  * Wrapper
- */ 
+ */
 
 .wrapper {
     max-width: -webkit-calc(900px - (#{$horizontal-spacing-unit} * 2));
