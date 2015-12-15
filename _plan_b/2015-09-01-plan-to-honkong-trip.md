@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "홍콩/마카오"
-title: "Part 1. 여행 계획하고 정리하기(작성중)"
+title: "Part 1. 계획하고 정리하기(작성중)"
 date: 2015-09-01
 ---
 
@@ -73,11 +73,6 @@ date: 2015-09-01
 게스트 하우스도 생각해 보았으나 화장실 사용이나 다른사람들과 방을 함께 사용하는데에 조금 불편한감을 가지고 있어서
 호스텔식으로 운영하는 숙소를 선택하게 되었다.
 우리는 예약을 조금 늦게하게 되었더니 마음에 들었던 숙소를 놓치게되어 침사추이역과 버스정류장이 가까운 [청킹멘션](https://www.airbnb.co.kr/rooms/5700239)을 선택하게 되었다.
-
-<div class="img_row">
-    <img class="col one" src="{{ site.baseurl }}/img/plan_b/hk/4.JPG" alt="" />
-    <img class="col two" src="{{ site.baseurl }}/img/plan_b/hk/5.JPG" alt="" />
-</div>
 
 
 **청킹멘션 후기**
