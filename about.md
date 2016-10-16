@@ -3,24 +3,24 @@ layout: page
 title: about
 permalink: /about/
 ---
-
-<img class="col profile" src="/img/seula-lee.jpg">
-
-일상기록, 정리, 관심있는 내용 스크랩 및 포트폴리오 등을 작성한 개인 페이지 입니다.
-
-This page is just my private blog what include about my life, posting some interesting things and portfolio.
-
-<br/>
-<hr/>
-<br/>
-
-<span class="contacticon center">
-	<a href="mailto:{{ site.social.email }}"><i class="fa fa-envelope"></i></a>
-	<a href="https://github.com/{{ site.social.github }}" target="_blank"><i class="fa fa-github"></i></a>
-	<a href="https://instagram.com/{{ site.social.instargram }}" target="_blank"><i class="fa fa-instagram"></i></a>
-</span>
-
-<div class="col three caption">
-	
+<div id="about">
+	<div class="profile">
+		<img src="/img/seula-lee.jpg">
+	</div>
+	<div class="description">
+		I'm Seula Lee (Grace), a reliable, activity and motivated web developer from South Korea.
+		<br/>
+		I like experimenting with new web technologies, currently has an obsession with Motion UI and between work and life, trying to keep my private blog rev up and I also love to travelling.
+		<br/>
+		<hr/>
+		<br/>
+	</div>
+	<div class="contact">
+		<p class="findme">
+		 Find me on:
+			<a href="mailto:{{ site.social.email }}">EMAIL</a>
+			<a href="{{ site.social.instargram }}" target="_blank">Instagram</a>
+			<a href="{{ site.social.linkedin }}" target="_blank">Linkedin</a>
+		</p>
+	</div>
 </div>
-

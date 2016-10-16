@@ -30,10 +30,21 @@ line-height: $nav-height;
 .page-link{
 line-height: $base-line-height;
         // Gaps between nav items, but not on the first one
-&:not(:first-child) {
-margin-left: 10px;
-        }
+&:not(.ico){
+  &:not(:first-child){
+  margin-left: 10px;
     }
+  }
+img{
+  position: relative;
+  top: 6px;
+  width: 24px;
+
+  &:first-child{
+      margin-left:10px;
+    }
+  }
+}
 @include media-query($on-palm) {
 position: fixed;
 top: 0px;
@@ -84,6 +95,7 @@ left:0px;
 bottom:0px;
 height:25px;
 width:100%;
+z-index: 999;
 }
 /**
  * Pagination   **********************************************************
@@ -92,8 +104,11 @@ width:100%;
 max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
 text-align: center;
 width: 100%;
-position: fixed;
 bottom: 50px;
+list-style: none;
+ > li {
+    display: inline;
+ }
 }
 .paginationicon {
 font-size: 50px;
@@ -177,7 +192,7 @@ font-size: 18px;
 .post-meta {
 font-size: $small-font-size;
 color: $grey-color;
-margin-bottom: 0px; 
+margin-bottom: 0px;
 }
 .post-link {
 display: block;
@@ -194,8 +209,33 @@ font-size: 16px;
     }
 }
 
+/**
+ * about page  **********************************************************
+ */
+#about .profile{
+text-align: center;
+margin-bottom: 15px;
+img{
+    max-width: 250px;
+    width: 15.33%;
+    margin-right: 10px;
+  }
+}
+#about .findme {
+margin-top: 50px;
+-webkit-transform: translatey(20px);
+transform: translatey(20px);
+}
+#about .findme a {
+margin-left: 13px;
+border-bottom: 1px solid;
+padding-bottom: 2px;
+letter-spacing: .1px;
+font-weight: 100;
+-webkit-transform: translateZ(0);
+}
 
-/** 
+/**
  * Portfolio grid **********************************************************
 */
 // Nicolas Gallagher's micro clearfix hack
@@ -208,51 +248,146 @@ display: table;
 .clearfix:after {
 clear: both;
 }
-.project {
-width: 33.33%;
-height: 250px;
-float: left;
-vertical-align: middle;
-box-sizing: border-box;
-padding: 10px;
+// Uiviking blog
+// http://uiviking.com/portfolio/
+#projects {
+  margin-top: 0px;
+  margin-left: -14px;
+  margin-right: -59px;
 }
-.thumbnail{
+#projects .pr-ex {
+  display: block;
+  text-decoration: none;
+  height: 219px;
+  overflow: hidden;
+  position: relative;
+  background-color: #2f2e31;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.pr-col-1, .pr-col-2{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .pr-col-1{
+    width: 33%;
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  .pr-col-2{
+    width: 44%;
+    float: left;
+  }
+}
+@media (max-width: 992px) {
+  #projects{
+    margin-top: 0px;
+    margin-left: -14px;
+    margin-right: -63px;
+  }
+  #projects .pr-ex {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  #projects{
+    margin-top: 0px;
+    margin-left: -14px;
+    margin-right: -12px;
+  }
+  #projects .pr-ex {
+    height: 219px;
+  }
+}
+#projects a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+#projects .pr-ex:before {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  content: "";
+  opacity: 0;
+  background-image: -webkit-linear-gradient(top, rgba(238, 82, 79, 0) 0%, rgba(238, 82, 79, 0.6) 100%);
+  background-image: linear-gradient(to bottom, rgba(238, 82, 79, 0) 0%, rgba(238, 82, 79, 0.6) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ee524f', endColorstr='#99ee524f', GradientType=0);
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+#projects .pr-ex:hover:before {
+  opacity: 1;
+}
+#projects .pr-ex:active:before {
+  background-image: -webkit-linear-gradient(top, rgba(238, 82, 79, 0) 0%, rgba(238, 82, 79, 0.9) 100%);
+  background-image: linear-gradient(to bottom, rgba(238, 82, 79, 0) 0%, rgba(238, 82, 79, 0.9) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ee524f', endColorstr='#e6ee524f', GradientType=0);
+}
+#projects .pr-ex:active {
+  z-index: 2;
+  -webkit-transform: perspective(1000px) rotate3d(-25, 0, 0, 10deg);
+  transform: perspective(1000px) rotate3d(-25, 0, 0, 10deg);
+}
+#projects .pr-ex .pr-ex-img {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+#projects .pr-ex .pr-ex-img img {
+  width: 100%;
+  display: block;
+  float: left;
+}
+#projects .pr-ex .pr-ex-desc {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  padding: 23px 24px;
+  background-color: #2f2e31;
+  color: #ee524f;
+  box-sizing: border-box;
+  font-family: 'latosemibold', sans-serif;
+}
+#projects .pr-ex .pr-ex-desc .pr-ex-name {
+  display: block;
+  float: left;
+  width: 80%;
+}
+#projects .pr-ex .pr-ex-desc .pr-ex-year {
+  display: block;
+  float: left;
+  width: 20%;
+  text-align: right;
+}
+#projects .pr-ex:hover .pr-ex-desc {
+  bottom: -100%;
+}
+/**
+ * Portfolio pages **********************************************************
+
+.blankbox{
 width: 100%;
 height: 230px;
 overflow: hidden;
-}
-.thumbnail img{
-width: 500px;
-height: auto;
-position: relative;
-left: -25%;
-top: -5%;
-}
-.thumbnail a{
-float: left;
-position: relative;
-width: 100%;
-height: 230px;
-}
-.thumbnail a span {
-display: none;
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-background: rgba(0,0,0,0.4);
-color: $grey-color-light;
-padding: 40px;
-text-align: center;
-}
-.thumbnail a:hover span {
-display: block;
-}
-/** 
- * Portfolio pages **********************************************************
-*/
-.blankbox{
 background: $theme-color;
 }
 .img_row{
@@ -262,7 +397,7 @@ overflow: hidden;
 box-sizing:border-box;
 padding: $img_spacing;
 }
-.col{ 
+.col{
 width: 100%;
 height: 100%;
 float: left;
@@ -288,4 +423,30 @@ color: $caption_color;
 text-align: center;
 vertical-align: middle;
 font-size: $caption_font_size;
+}
+*/
+/**
+ * Portfolio pages **********************************************************
+*/
+#credits .description
+,#credits .period
+,#credits .agency
+,#credits .skill
+,#credits .position{
+  font-weight: 100;
+  line-height: 1.6em;
+  font-size: 14px;
+}
+#credits ul{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 0;
+}
+#credits ul li{
+    border-bottom: 1px dotted #cacaca;
+    padding: 8px 0;
+}
+#credits img{
+  width: 60%;
+  height: 60%;
 }

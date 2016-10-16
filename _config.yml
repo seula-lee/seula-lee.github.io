@@ -1,15 +1,25 @@
-# Site settings
+ # Site settings
 title: "*PLAN B"
-description: "기록, 생각, 정리"
+description: "Keeping myself"
 url: "http://salee-lee.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Author Info
 social:
-   github: seula-lee
-   instargram: lookat.lee
+   github: https://github.com/seula-lee
+   instargram: https://instagram.com/seula.leee
    email: salee8909@gmail.com
+   linkedin: www.linkedin.com/in/seul-a-grace-lee
 
+#gem
+gems:
+  - jekyll-angular
+  - jekyll-paginate
+
+# Languages
+lang:
+  en: en
+  ko: ko
 
 # Build settings
 markdown: kramdown
@@ -17,9 +27,16 @@ kramdown:
   input: GFM
 highlighter: pygments
 
+#-------------------------------------------
 # Pagination
-paginate: 10
-paginate_path: "/blog/page:num/"
+#-------------------------------------------
+# 글로벌 변수 paginator -- index.html 에서만 동작
+# property
+# previouse_page , next_page
+# total_pages (페이지 총수)
+#-------------------------------------------
+paginate: 5
+#paginate_path: "/blog/page:num/"
 
 
 collections:
@@ -29,4 +46,3 @@ collections:
   plan_b:
     output: true
     permalink: /plan_b/:path/
-

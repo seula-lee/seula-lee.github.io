@@ -3,45 +3,22 @@ layout: page
 title: portfolio
 permalink: /portfolio/
 ---
-
+<div id="projects">
 {% for project in site.portfolio %}
-
-{% if project.redirect %}
-<div class="project">
-    <div class="thumbnail">
-        <a href="{{ project.redirect }}" target="_blank">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}    
-        <span>
-            <h4>{{ project.title }}</h4>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
+    <div class="pr-col-1 pr-col-2">
+      <div class="pr-ex site-box">
+          <a href="{{ site.baseurl }}{{ project.url }}">
+          <div class="pr-ex-img">
+            {% if project.img %}
+            <img src="{{ project.img }}"/>
+            {% endif %}    
+          </div>
+          <div class="pr-ex-desc">
+            <span class="pr-ex-name">{{ project.title }}</span>
+            <span class="pr-ex-year">{{ project.year }}</span>
+          </div>  
+          </a>
+      </div>
     </div>
-</div>
-{% else %}
-
-<div class="project ">
-    <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ project.url }}">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}    
-        <span>
-            <h4>{{ project.title }}</h4>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
-    </div>
-</div>
-
-{% endif %}
-
 {% endfor %}
+</div>

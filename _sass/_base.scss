@@ -154,13 +154,6 @@ article a {
 article img{
   max-width: calc(800px - (50px * 2));
 }
-
-img.profile{
-  max-width: 250px;
-  width: 15.33%;
-  margin-right: 10px;
-}
-
 /**
  * Blockquotes
  */
@@ -323,4 +316,8 @@ ul.listing li label{
   td {
     padding: 4px 0;
   }
+}
+
+.center{
+  text-align: center;
 }
