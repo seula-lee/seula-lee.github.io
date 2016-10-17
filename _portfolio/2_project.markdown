@@ -3,7 +3,6 @@ layout: portfolio
 title: "자동 연말정산 시스템"
 year:  "2013"
 period: "2013.10 - 2014.02"
-img:
 Agency: "Webcash Inc."
 position: "페이지, 데이터 연계 개발"
 skill: "HTML5, CSS3, javascript, jQuery, JAVA, AJAX, PostgreSQL, Apache Tomcat, JexFramework, OZ"

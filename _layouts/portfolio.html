@@ -13,9 +13,8 @@ layout: default
       <div class="center">
         <iframe width="560" height="315" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
       </div>
-      {%else if page.img %}
+      {%elsif page.img %}
       <div class="center"><img src="{{ page.img }}"/></div>
-      {%else%}
       {% endif %}
       <ul>
         <li class="agency">{{ page.agency }}</li>
