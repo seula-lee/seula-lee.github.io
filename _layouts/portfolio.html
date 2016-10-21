@@ -13,7 +13,7 @@ layout: default
       <div class="center">
         <iframe width="560" height="315" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
       </div>
-      {%elsif page.img %}
+      {% elsif page.img %}
       <div class="center"><img src="{{ page.img }}"/></div>
       {% endif %}
       <ul>
@@ -22,11 +22,17 @@ layout: default
         <li class="position">역할 : {{ page.position }}</li>
         <li class="skill">사용기술 : {{ page.skill }}</li>
         {%if page.link %}
-        <li class="skill">
-          <a href="{{ page.link }}">
-            <i class="fa fa-link fa-lg" aria-hidden="true"></i> {{ page.link }}
-          </a>
-        </li>
+          {% if page.link == "none"%}
+          <li class="skill">
+              <i class="fa fa-link fa-lg" aria-hidden="true"></i> 서비스 중단
+          </li>
+          {% else %}
+          <li class="skill">
+            <a href="{{ page.link }}">
+              <i class="fa fa-link fa-lg" aria-hidden="true"></i> {{ page.link }}
+            </a>
+          </li>
+          {% endif %}
         {% endif %}
       </ul>
       <p class="description">
