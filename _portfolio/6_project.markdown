@@ -9,6 +9,6 @@ position: "공통기능 개발"
 link: https://sba.ibizon.co.kr
 skill: "HTML5, CSS3, javascript, jQuery, JAVA, Ajax, PostgreSQL, JBoss, JexFramework"
 ---
-> Web service 기능구현 : <br>
+> Web service 기능구현<br>
 jQuery, jqGrid 를 이용한 기능 및 화면 개발<br>
-<a href="http://www.forcs.com/"/>OZ</a>를 이용한 출력물 서비스 개발
+<a href="http://www.forcs.com/">OZ</a>를 이용한 출력물 서비스 개발

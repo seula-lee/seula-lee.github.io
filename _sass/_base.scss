@@ -19,7 +19,7 @@ h5 {
 }
 
 /** Variables **********************************************/
-$base-font-family:              'Roboto Condensed', 'Jeju Gothic', sans-serif, Helvetica;
+$base-font-family:              sans-serif, Helvetica; //'Roboto Condensed', 'Jeju Gothic',
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
@@ -161,7 +161,7 @@ blockquote {
     color: $text-color;
     border-left: 10px solid $theme-color;
     padding-left: $horizontal-spacing-unit / 2;
-    font-size: 18px;
+    font-size: 15px;
     font-style: italic;
 
     > :last-child {
