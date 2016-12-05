@@ -3,7 +3,7 @@ layout: portfolio
 title: 산학협력단ERP-SYSTEM
 year: "2016"
 period: "2016.01 - 2016.03"
-img: /img/portfolio/6_01.png
+img: /img/portfolio/1_01.png
 Agency: "Webcash Inc."
 position: "시스템, 출력물 서비스 개발 및 유지보수"
 skill: "JAVA, Javascript, jQuery, SQL server, Window server, JBoss, JexFramework, OZ"

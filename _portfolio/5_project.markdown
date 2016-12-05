@@ -3,6 +3,8 @@ layout: portfolio
 title: "자동 연말정산 시스템"
 year:  "2013"
 period: "2013.10 - 2014.02"
+img: /img/portfolio/5_01.png
+main_img: /img/portfolio/5_02.png
 Agency: "Webcash Inc."
 link: "none"
 position: "페이지, 데이터 연계 개발"

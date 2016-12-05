@@ -3,7 +3,7 @@ layout: portfolio
 title: 플로우(Bizplay)
 year: "2015"
 period: "2014.09 - 2015.08"
-img: /img/portfolio/4_01.png
+img: /img/portfolio/3_01.png
 video: https://player.vimeo.com/video/184208263
 Agency: "Bizplay Inc."
 position: "플로우 메인담당 개발, 기획"

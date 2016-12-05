@@ -8,13 +8,17 @@ layout: default
   </header>
 
   <div class="post-content">
-    <div id="credits">
+    <div id="portfolio">
       {% if page.video %}
       <div class="center">
         <iframe width="560" height="315" src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
       </div>
       {% elsif page.img %}
-      <div class="center"><img src="{{ page.img }}"/></div>
+        {% if page.main_img %}
+          <div class="center"><img src="{{ page.main_img }}"/></div>
+        {% else %}
+          <div class="center"><img src="{{ page.img }}"/></div>
+        {% endif %}
       {% endif %}
       <ul>
         <li class="agency">{{ page.agency }}</li>

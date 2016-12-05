@@ -427,27 +427,27 @@ font-size: $caption_font_size;
 }
 
 /**
- * Portfolio pages **********************************************************
+ * #portfolio pages **********************************************************
 */
-#credits .description
-,#credits .period
-,#credits .agency
-,#credits .skill
-,#credits .position{
+#portfolio .description
+,#portfolio .period
+,#portfolio .agency
+,#portfolio .skill
+,#portfolio .position{
   font-weight: 100;
   line-height: 1.6em;
   font-size: 14px;
 }
-#credits ul{
+#portfolio ul{
     list-style: none;
     margin-top: 20px;
     margin-left: 0;
 }
-#credits ul li{
+#portfolio ul li{
     border-bottom: 1px dotted #cacaca;
     padding: 8px 0;
 }
-#credits img{
-  width: 60%;
+#portfolio img{
+  width: 95%;
   height: 60%;
 }
