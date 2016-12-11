@@ -1,5 +1,19 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Godo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
 /**
  * Reset some basic elements
  */
@@ -19,7 +33,7 @@ h5 {
 }
 
 /** Variables **********************************************/
-$base-font-family:              sans-serif, Helvetica; //'Roboto Condensed', 'Jeju Gothic',
+$base-font-family:              'Godo', sans-serif, Helvetica; //'Roboto Condensed', 'Jeju Gothic',
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
@@ -47,8 +61,6 @@ $text-color:     #666;
 
 /* Set theme color *************************/
 $theme-color:   $red;
-
-
 /************************************************************/
 
 /**
@@ -200,7 +212,7 @@ blockquote {
 
 /**
  * Code formatting
- */
+
 pre,
 code {
     font-size: 15px;
@@ -227,7 +239,7 @@ pre {
         padding-left: 0;
     }
 }
-
+*/
 
 
 /**

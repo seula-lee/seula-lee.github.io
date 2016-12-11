@@ -101,14 +101,12 @@ z-index: 999;
  * Pagination   **********************************************************
  */
 .pagination{
-max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
-text-align: center;
+min-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
 width: 100%;
 bottom: 50px;
 list-style: none;
- > li {
-    display: inline;
- }
+margin: 0 !important;
+ > span { display: inline; }
 }
 .paginationicon {
 font-size: 50px;
@@ -450,4 +448,42 @@ font-size: $caption_font_size;
 #portfolio img{
   width: 95%;
   height: 60%;
+}
+/**
+ * tag-cloud and #archives **********************************************************
+*/
+
+.tag-cloud {
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
+  text-align: justify;
+  font-size: 0.8em;
+  li {
+    background-color: #888;
+    display: inline-block;
+    padding: 0.2em 1em;
+  }
+  li a{
+    color: #fff;
+  }
+}
+#archives {
+  padding: 5px;
+}
+.archive-group {
+  margin: 5px;
+  border-top: 1px solid #ddd;
+}
+.archive-item {
+  margin-left: 5px;
+}
+.post-tags {
+  padding: 7.5px 0;
+}
+.post-tag-pill{
+  padding: 0.2em 1em;
+  color: #fff;
+  background-color: #888;
+  font-size: 0.8em;
 }
