@@ -11,6 +11,10 @@ social:
    email: salee8909@gmail.com
    linkedin: www.linkedin.com/in/seul-a-grace-lee
 
+# google-analytics
+google-analytics:
+  id: "UA-88757187-1"
+
 #gems
 gems:
   - jekyll-angular
