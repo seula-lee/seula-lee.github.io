@@ -3,6 +3,7 @@ layout: post
 category : Git
 title:  Git 용어 정리
 date: 2015-11-30
+tags: [git]
 ---
 
 ### Git 용어 정리
