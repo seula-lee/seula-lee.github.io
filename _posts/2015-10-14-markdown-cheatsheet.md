@@ -118,8 +118,6 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-<b>tag</b>
-
 <div class="divider"></div>
 
 ### 표 (Table)

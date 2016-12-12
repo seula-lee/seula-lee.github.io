@@ -5,10 +5,10 @@ title:  Jekyll 태그 추가하기
 date: 2016-12-04
 tags: [jekyll, Liquid, tag]
 ---
-출처 > <a href="http://kalapun.com/posts/liquid-tag-management-for-jekyll/" target="_blank"> Liquid tag management for Jekyll</a>
+출처 > [Liquid tag management for Jekyll](http://kalapun.com/posts/liquid-tag-management-for-jekyll/)
 
 > Jekyll은 블로깅하기에 단순 명료하나, 플러그인에 제한적이라는 단점이 있다.
-카테고리별로 분리해서 글을 보기위해 Jekyll에 태그기능을 적용하고 싶어 Jekyll-tagging 이라는 플러그인을 사용하려다 Jekyll version에 따라서 정상 동작하지 않는 다는 것을 확인하고 위 출처의 블로그를 참고하여 <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid</a>에서 제공하는 tags 기능을 적용해 보았다.
+카테고리별로 분리해서 글을 보기위해 Jekyll에 태그기능을 적용하고 싶어 Jekyll-tagging 이라는 플러그인을 사용하려다 Jekyll version에 따라서 정상 동작하지 않는 다는 것을 확인하고 위 출처의 블로그를 참고하여 [Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)에서 제공하는 tags 기능을 적용해 보았다.
 
 #### tag.html 생성
 > 태그 리스트와 각 태그에 해당하는 게시글을 모아 볼 수 있는 화면을 생성한다.
@@ -103,7 +103,7 @@ permalink: /tags/
 {% endraw %}
 {% endhighlight %}
 
-> post.html에 생성한 post_tags.html 파일을 include한다. 
+> post.html에 생성한 post_tags.html 파일을 include한다.
 {% highlight html %}
 {% raw %}
 {% include post_tags.html %}
