@@ -12,39 +12,30 @@ layout: default
 
 <ul class="listing">
     {% for post in paginator.posts %}
-    <li>
-      <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
+      <li>
+        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
     {% endfor %}
 </ul>
 
 <!-- start pagination links -->
+
+
 <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <span><a href="/"> < Prev </a></span>
+      <span><a href="/"> < Prev </a></span>
     {% else %}
-    <span><a href="/page{{ paginator.previous_page }}"> < Prev </a></span>
+      <span><a href="/page{{ paginator.previous_page }}"> < Prev </a></span>
     {% endif %}
   {% else %}
-  <span></span>
+    <span></span>
   {% endif %}
-  <!-- {% if paginator.page == 1 %}
-  <li><span class="active">1</span></li>
-  {% else %}
-  <li><a href="/">1</a></li>
-  {% endif %} -->
-  <!-- {% for count in (2..paginator.total_pages) %}
-    {% if count == paginator.page %}
-    <li><span class="active">{{ count }}</span></li>
-    {% else %}
-    <li><a href="/page{{ count }}">{{ count }}</a></li>
-    {% endif %}
-  {% endfor %} -->
+
   {% if paginator.next_page %}
-  <span class="alignright"><a href="/page{{ paginator.next_page }}"> Next > </a></span>
+    <span class="alignright"><a href="/page{{ paginator.next_page }}"> Next > </a></span>
   {% else %}
-  <span class="alignright"></span>
+    <span class="alignright"></span>
   {% endif %}
 </div>
 <!-- end pagination links -->

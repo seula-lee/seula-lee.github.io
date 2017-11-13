@@ -1,6 +1,5 @@
 ---
 layout: post
-category : Jekyll
 title:  Jekyll 태그 추가하기
 date: 2016-12-04
 tags: [jekyll, Liquid, tag]

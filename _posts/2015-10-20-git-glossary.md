@@ -1,6 +1,5 @@
 ---
 layout: post
-category : Git
 title:  Git 용어 정리
 date: 2015-11-30
 tags: [git]
@@ -10,6 +9,7 @@ tags: [git]
 
 `git add`
 
+작업중인 디렉토리에서 준비 공간에 이동시키는 명령어로 히스토리에 Commit 하기 이전에 목록을 확인할 수 있도록 한다.
 Moves changes from the working directory to the staging area. This gives you the opportunity to prepare a snapshot before committing it to the official history.
 
 >Related Tutorials
